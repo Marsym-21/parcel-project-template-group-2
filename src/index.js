@@ -1,6 +1,8 @@
+//Приклад використання промісів з getBooksData.js
+
 import { getBookData } from './js/getBooksData.js';
 
-const booksInform = new getBookData();
+const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
 function renderCategoryList() {
   const body = document.querySelector('body');
@@ -8,10 +10,10 @@ function renderCategoryList() {
   body.append(list);
   let categoryArray = [];
   booksInform
-    .getPromTopBooks()
+    .getPromCategoryList()
     .then(books => {
       categoryArray = books.map(book => `<li>${book.list_name}</li>`).join('');
-      console.log(categoryArray);
+      console.log(books);
       list.insertAdjacentHTML('beforeend', categoryArray);
     })
     .catch(error => {

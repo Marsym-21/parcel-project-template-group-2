@@ -1,7 +1,5 @@
-fetch('https://books-backend.p.goit.global/books/category-list')
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  });
+import { booksData } from './js/getBooksData';
+
+const booksData = new booksData();
+
+console.log(booksData);

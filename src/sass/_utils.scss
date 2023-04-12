@@ -8,6 +8,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  font-family: DM Sans;
+}
 
 ul,
 a {
@@ -56,8 +59,11 @@ img {
   --logout-btn-color-text: #111111;
   --logout-btn-background-color-focus: #4f2ee8;
   --logout-btn-color-text-focus: #ffffff;
-
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --font-style-bold: Bold;
+  --font-style-medium: Medium;
+  --font-style-regular: Regular;
+  --font-style-italic: Italic;
 }
 
 .is-hidden {

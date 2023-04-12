@@ -1,5 +1,21 @@
-import { booksData } from './js/getBooksData';
+import { getBookData } from './js/getBooksData.js';
 
-const booksData = new booksData();
+const booksInform = new getBookData();
 
-console.log(booksData);
+function renderCategoryList() {
+  const body = document.querySelector('body');
+  const list = document.createElement('ul');
+  body.append(list);
+  let categoryArray = [];
+  booksInform
+    .getPromTopBooks()
+    .then(books => {
+      categoryArray = books.map(book => `<li>${book.list_name}</li>`).join('');
+      console.log(categoryArray);
+      list.insertAdjacentHTML('beforeend', categoryArray);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
+renderCategoryList();

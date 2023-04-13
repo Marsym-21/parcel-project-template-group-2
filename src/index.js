@@ -14,7 +14,7 @@ function renderCategoryList() {
   body.append(list);
   // let categoryArray = [];
   booksInform
-    .getPromId()
+    .getPromTopBooks()
     .then(books => {
       // categoryArray = books.map(book => `<li>${book.list_name}</li>`).join('');
       console.log(books);

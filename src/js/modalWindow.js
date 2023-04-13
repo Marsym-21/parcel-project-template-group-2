@@ -1,15 +1,12 @@
 import { getBookData } from './getBooksData.js';
-const booksInform = new getBookData(
-    (id = '643282b1e85766588626a085')
-  );
+const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 function renderBookInformation() {
-const modalContainer = document.querySelector('.modal-container');
-   
-    booksInform
-      .getPromId()
-      .then((data) => {
-        
-        categoryArray = `
+  const modalContainer = document.querySelector('.modal-container');
+
+  booksInform
+    .getPromId()
+    .then(data => {
+      categoryArray = `
        <div class="modal-close__btn-wrapper">
 	    <button type='button' class='modal-close-btn js-modal-close-btn '>
 	   <svg class="close"  width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,13 +30,13 @@ const modalContainer = document.querySelector('.modal-container');
        <div class ="modal-book__third"></div>
        </div>
         `;
-        // console.log(categoryArray);
-        // console.log(modalContainer);
-        modalContainer.innerHTML = categoryArray;
-        console.log(modalContainer);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
-  renderBookInformation()
+      console.log(categoryArray);
+      console.log(modalContainer);
+      modalContainer.innerHTML = categoryArray;
+      console.log(modalContainer);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}
+renderBookInformation();

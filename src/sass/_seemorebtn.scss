@@ -1,12 +1,11 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
 
 .seemore__button {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 14px 28px;
+    padding: 14px 24px;
     gap: 10px;
-    position: absolute;
+    // position: absolute;
     width: 124px;
     height: 46px;
     // left: 231px;
@@ -16,9 +15,10 @@
     background-color: transparent;
     font-family: inherit;
     font-weight: 700;
+    align-items: center;
     color: #111111;
     font-size: 14px;
-    line-height: 1.29;
+    line-height: 1.2;
     letter-spacing: -0.01em;
     text-transform: uppercase;
         
@@ -34,3 +34,25 @@
         }
     }
     
+
+//     border: none;
+
+    // @include tablet {
+    //   width: 132px;
+    //   padding-top: 16px;
+    //   padding-bottom: 16px;
+    // }
+
+// .seemore__button {
+//     display: flex;
+//     gap: 24px;
+//     @media screen and (max-width: 767px) {
+//       flex-wrap: wrap;
+//       gap: 24px;
+//     }
+//     @include tablet {
+//       justify-content: center;
+//       gap: 53px;
+//     }
+//   }
+

@@ -21,3 +21,5 @@ function renderCategoryList() {
     });
 }
 renderCategoryList();
+
+import './js/toggle-theme';

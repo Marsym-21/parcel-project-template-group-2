@@ -1,5 +1,5 @@
+import './js/toggle-theme';
 //Приклад використання промісів з getBooksData.js
-
 import { getBookData } from './js/getBooksData.js';
 import { createCategoryString } from './js/getCategoryString.js';
 
@@ -14,7 +14,7 @@ function renderCategoryList() {
   body.append(list);
   // let categoryArray = [];
   booksInform
-    .getPromCategory()
+    .getPromId()
     .then(books => {
       // categoryArray = books.map(book => `<li>${book.list_name}</li>`).join('');
       console.log(books);
@@ -25,5 +25,3 @@ function renderCategoryList() {
     });
 }
 renderCategoryList();
-
-import './js/toggle-theme';

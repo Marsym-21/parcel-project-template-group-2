@@ -1,1 +1,0 @@
-{"mappings":"YAAO,IACCA,IAIa,2BAJEC,MAAM,IAC3BC,QAAQC,IAAIH,E","sources":["src/js/getCategoryString.js"],"sourcesContent":["export function createCategoryString(string) {\n  const array = string.split('');\n  console.log(array);\n}\n\ncreateCategoryString('sdfsd sdfsd dsfsd dsfsdf');\n"],"names":["array","split","console","log"],"version":3,"file":"index.eea191bc.js.map"}

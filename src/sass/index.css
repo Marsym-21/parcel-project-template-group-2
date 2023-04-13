@@ -68,6 +68,18 @@ img {
   --font-style-medium: Medium;
   --font-style-regular: Regular;
   --font-style-italic: Italic;
+  --background-toggle-light-theme: linear-gradient(
+    rgba(79, 46, 232, 1),
+    rgba(220, 220, 220, 1)
+  );
+  --background-toggle-dark-theme: linear-gradient(
+    rgba(79, 46, 232, 1),
+    rgba(104, 104, 104, 1)
+  );
+  --gradient-toggle: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(247, 247, 247, 1)
+  );
 }
 
 .is-hidden {

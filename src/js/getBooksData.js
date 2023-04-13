@@ -4,7 +4,7 @@ export class getBookData {
     this.URL = 'https://books-backend.p.goit.global';
     this.categoryList = '/books/category-list';
     this.topBooks = '/books/top-books';
-    this.category = '/books/category?category=Audio%20Fiction';
+    this.category = `'/books/category?category=${category}'`;
     this.id = `/books/${id}`;
   }
 

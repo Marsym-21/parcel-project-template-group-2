@@ -349,7 +349,7 @@ img {
   padding: 40px;
   overflow: auto;
   border: 2px solid #111111;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .modal-book {
@@ -408,7 +408,7 @@ img {
 .modal-book__author {
   font-size: 14px;
   line-height: 18px;
-  color: #B4AFAF;
+  color: #b4afaf;
 }
 
 .modal-book__about {
@@ -426,11 +426,29 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: #111111;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .modal-book__stores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 28px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-book__applebook {
+  margin-left: 40px;
+}
+
+.book {
+  width: 60px;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 #myBtn {

@@ -1,10 +1,10 @@
 const axios = require('axios').default;
 export class getBookData {
-  constructor(URL, categoryList, topBooks, category, id) {
+  constructor(id, category) {
     this.URL = 'https://books-backend.p.goit.global';
     this.categoryList = '/books/category-list';
     this.topBooks = '/books/top-books';
-    this.category = `'/books/category?category=${category}'`;
+    this.category = `/books/category?category=${category}`;
     this.id = `/books/${id}`;
   }
 
@@ -32,7 +32,6 @@ export class getBookData {
     try {
       const response = await axios.get(`${this.URL}${this.category}`);
       const category = await response.data;
-      console.log(category);
       return category;
     } catch (error) {
       console.log(error);

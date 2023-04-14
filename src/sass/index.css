@@ -1,13 +1,15 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 @import '~node_modules/modern-normalize/modern-normalize.css';
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -115,6 +117,132 @@ img {
   }
 }
 
+.support {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.support > .support-container {
+  background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+  -webkit-box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+          box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+  border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 335px;
+}
+@media screen and (min-width: 768px) {
+  .support > .support-container {
+    padding-bottom: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .support > .support-container {
+    padding-bottom: 24px;
+    width: 356px;
+  }
+}
+
+.support-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-right: 0;
+  color: #ffffff;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+}
+
+.support-thumb {
+  min-width: 159px;
+  max-height: 200px;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .support-thumb {
+    max-height: 292px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .support-thumb {
+    margin-bottom: 40px;
+  }
+}
+
+.swiper > .swiper-wrapper {
+  height: 292px;
+}
+
+.support-list {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.support-item {
+  height: 32px;
+}
+@media screen and (min-width: 768px) {
+  .support-item {
+    margin-bottom: 20px;
+  }
+}
+
+.support-number {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.support-button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .support-button-next {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.support-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  height: 32px;
+}
+
+.support-logo {
+  margin-left: 10px;
+}
+
+.support-svg {
+  fill: #a53c3c;
+}
+
 .light {
   background-color: var(--body-white-background-color);
 }
@@ -152,28 +280,86 @@ img {
   background: var(--gradient-toggle);
   top: 1px;
   left: 1px;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: pointer;
+}
+
+.books-list {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 50px;
+}
+
+.seemore__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 124px;
+  height: 46px;
+  border: 2px solid #4F2EE8;
+  border-radius: 40px;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #111111;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+}
+.seemore__button:hover, .seemore__button:focus {
+  color: #FFFFFF;
+  background-color: #4F2EE8;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
 }
 
 .modal-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 579px;
   height: 465px;
   margin: 0 auto;
   padding: 40px;
   overflow: auto;
   border: 2px solid #111111;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .modal-book {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 24px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-close__btn-wrapper {
@@ -222,7 +408,7 @@ img {
 .modal-book__author {
   font-size: 14px;
   line-height: 18px;
-  color: #B4AFAF;
+  color: #b4afaf;
 }
 
 .modal-book__about {
@@ -240,13 +426,17 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: #111111;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .modal-book__stores {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 28px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-book__applebook {
@@ -255,4 +445,40 @@ img {
 
 .book {
   width: 60px;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+}
+
+.btn-scrollup {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.vector-scrollup {
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+}
+
+.circle_scrollup {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=index.css.map */

@@ -6,21 +6,21 @@ function renderBookInformation() {
   booksInform
     .getPromId()
     .then(data => {
+      function links(sms) {
+        const link = data.buy_links;
+        for (let i = 0; i < link.length; i += 1) {
+          if (link[i].name === `${sms}`) {
+            return link[i].url;
+          } else if (link[i].name !== `${sms}`) {
+            continue;
+          }
+        }
+      }
 
-      function links(sms) { 
-        const link = data.buy_links; 
-        for (let i = 0; i < link.length; i += 1) { 
-            if (link[i].name === `${sms}`) { 
-             return link[i].url; 
-            }else if (link[i].name !== `${sms}`) { 
-              continue; 
-          }} 
-      };
-       
-      console.log(links('Amazon')); 
-      console.log(links('Bookshop')); 
-      console.log(links('Apple Books')); 
- 
+      console.log(links('Amazon'));
+      console.log(links('Bookshop'));
+      console.log(links('Apple Books'));
+
       categoryArray = `
        <div class="modal-close__btn-wrapper">
       <button type='button' class='modal-close-btn js-modal-close-btn '>
@@ -100,13 +100,14 @@ function renderBookInformation() {
        </div>
        </div>
        <div  class="modal-book__add__wrapper">  
-       <button type="button" class="modal-book__button btn__add" data-id="${data.id}">Add to shopping list</button>  
+       <button type="button" class="modal-book__button btn__add" data-id="${
+         data.id
+       }">Add to shopping list</button>  
          
    </div>  
         `;
- 
+
       modalContainer.innerHTML = categoryArray;
-      
     })
     .catch(error => {
       console.log(error);

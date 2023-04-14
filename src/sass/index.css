@@ -117,47 +117,6 @@ img {
   }
 }
 
-.seemore__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 14px 24px;
-  gap: 10px;
-  width: 124px;
-  height: 46px;
-  border: 2px solid #4F2EE8;
-  border-radius: 40px;
-  background-color: transparent;
-  font-family: inherit;
-  font-weight: 700;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #111111;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
-  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-}
-.seemore__button:hover, .seemore__button:focus {
-  color: #FFFFFF;
-  background-color: #4F2EE8;
-  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
-}
-
 .light {
   background-color: var(--body-white-background-color);
 }
@@ -198,6 +157,58 @@ img {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: pointer;
+}
+
+.books-list {
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 50px;
+}
+
+.seemore__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 14px 24px;
+  gap: 10px;
+  width: 124px;
+  height: 46px;
+  border: 2px solid #4F2EE8;
+  border-radius: 40px;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #111111;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+}
+.seemore__button:hover, .seemore__button:focus {
+  color: #FFFFFF;
+  background-color: #4F2EE8;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
 }
 
 .modal-container {

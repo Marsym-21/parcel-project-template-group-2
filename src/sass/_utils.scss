@@ -8,6 +8,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  font-family: DM Sans;
+}
 
 ul,
 a {
@@ -56,8 +59,23 @@ img {
   --logout-btn-color-text: #111111;
   --logout-btn-background-color-focus: #4f2ee8;
   --logout-btn-color-text-focus: #ffffff;
-
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --font-style-bold: Bold;
+  --font-style-medium: Medium;
+  --font-style-regular: Regular;
+  --font-style-italic: Italic;
+  --background-toggle-light-theme: linear-gradient(
+    rgba(79, 46, 232, 1),
+    rgba(220, 220, 220, 1)
+  );
+  --background-toggle-dark-theme: linear-gradient(
+    rgba(79, 46, 232, 1),
+    rgba(104, 104, 104, 1)
+  );
+  --gradient-toggle: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(247, 247, 247, 1)
+  );
 }
 
 .is-hidden {

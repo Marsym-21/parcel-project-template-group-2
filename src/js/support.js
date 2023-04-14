@@ -89,12 +89,14 @@ const swiper = new Swiper('.swiper', {
   // navigation: true,
   // slidesPerGroup: 4,
   // oneWayMovement: true,
+  rewind: true,
   breakpoints: {
     768: {
       slidesPerView: 6,
-      slidesPerGroup: 6,
+      slidesPerGroup: 1,
       // spaceBetween: 20,
-      loop: true,
+      // loop: true,
+      rewind: true,
     },
   },
 });

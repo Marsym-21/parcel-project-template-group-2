@@ -92,9 +92,13 @@ line-height: 1.29;
     margin-right: auto;
     width: 32px;
 height: 32px;
-transform: rotate(90deg);
+// transform: rotate(90deg);
 background: #FFFFFF;
 border-radius: 50%;
+@media screen and (min-width: 768px) {
+    width: 38px;
+    height: 38px;
+}
 }
 
 .support-link {

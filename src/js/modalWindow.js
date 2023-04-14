@@ -31,8 +31,7 @@ function renderBookInformation() {
        <div class="modal-close__btn-wrapper">
       <button type='button' class='modal-close-btn js-modal-close-btn '>
      <svg class="close" fill="none" width="30" height="30">
-     
-     <use href="${logoPath}#icon-x-close"></use>
+          <use href="${logoPath}#icon-x-close"></use>
 </svg>
     
        <path d="m8 8 14 14M8 22 22 8" stroke="#000" stroke-width="2" />
@@ -61,7 +60,7 @@ function renderBookInformation() {
    aria-label="amazon icon"
    >
   
-   <svg class="close" fill="none" width="60" height="60">
+   <svg class="book" fill="none" width="60" height="60">
           <use href="${logoPath}#icon-amazon-ar21"></use>
 </svg>
 
@@ -96,7 +95,6 @@ function renderBookInformation() {
        </div>
        <div  class="modal-book__add__wrapper">  
        <button type="button" class="modal-book__button btn__add" data-id="${data.id}">Add to shopping list</button>  
-         
    </div>  
         `;
  

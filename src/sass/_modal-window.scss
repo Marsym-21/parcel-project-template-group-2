@@ -38,11 +38,10 @@
     border: 0;
     opacity: 0.3;
     cursor: pointer;
-    fill: #111111;
-    
+        
     &:hover {
       opacity: 1;
-      color: #4F2EE8;
+      filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.55));
      
   }
   }
@@ -66,6 +65,7 @@
   }
 
   .modal-book__title {
+
     font-size: 24px;
     line-height: 28px;
     margin: 0;
@@ -112,8 +112,14 @@
   }
   .book {
     width: 60px;
+    &:hover{
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.55));
+    }
   }
 
   body.modal-open {
     overflow: hidden;
+  }
+  .modal-book__amazon {
+    padding: 0;
   }

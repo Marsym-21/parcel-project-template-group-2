@@ -1,13 +1,26 @@
 import { getBookData } from './getBooksData'; 
 // const logoPath = new URL('../images/SVG/PNG/dump.png', import.meta.url); 
-const shopingListEl = document.querySelector('.shopingList'); 
-console.log(shopingListEl)
-const getBook = new getBookData((id = '643282b1e85766588626a085')); 
+const shopingListEl = document.querySelector('.shopingList');
+
+const key = ['643282b1e85766588626a080', '643282b1e85766588626a0ba', '643282b1e85766588626a0ba', '643282b1e85766588626a0dc', '643282b2e85766588626a0fc', '643282b2e85766588626a118'];
  
+stringKey = JSON.stringify(key);
+
+localStorage.setItem('id', stringKey)
+
+
+const getLocalstorage = localStorage.getItem('id')
+parseLokalstorage = JSON.parse(getLocalstorage)
+
+
+
+parseLokalstorage.map((id) => {
+    
+const getBook = new getBookData((id = `${id}`)); 
+
 function renderBook() { 
     
-  const renderCard = getBook .getPromId() .then( ({ list_name, author, title, book_image, description, buy_links }) => { 
-        // console.log(buy_links) 
+  const renderCard = getBook.getPromId() .then( ({ list_name, author, title, book_image, description, buy_links }) => { 
     function links(sms) { 
           const link = buy_links; 
           for (let i = 0; i < link.length; i += 1) { 
@@ -60,6 +73,14 @@ function renderBook() {
   }); 
 } 
 renderBook();
+})
+
+
+
+
+
+
+
 
 
     

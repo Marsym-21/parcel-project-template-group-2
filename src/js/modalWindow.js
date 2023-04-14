@@ -1,6 +1,9 @@
 import { getBookData } from './getBooksData.js';
 const booksInform = new getBookData((id = '643282b2e85766588626a112'));
 const logoPath = new URL('../images/icons.svg', import.meta.url);
+let addedToShoppingBag = false;
+let booksArray = [];
+
 function renderBookInformation() {
   const modalContainer = document.querySelector('.modal-container');
 
@@ -94,15 +97,53 @@ function renderBookInformation() {
        </div>
        </div>
        <div  class="modal-book__add__wrapper">  
-       <button type="button" class="modal-book__button btn__add" data-id="${data.id}">Add to shopping list</button>  
+       <button type="button" class="modal-book__button" id="${data.id}">Add to shopping list</button>  
    </div>  
         `;
  
       modalContainer.innerHTML = categoryArray;
+
+      const closeButton = document.querySelector('.modal-close-btn');
+      closeButton.addEventListener('click', closeBtn);
+      function closeBtn() {
+      modalContainer.classList.add('is-hidden');
+      document.querySelector('body').classList.remove('modal-open');
+          }
+
+
+      const addButton= document.querySelector('.modal-book__button');
+      addButton.addEventListener('click', () => {
+         if (booksArray.includes(id))  {
+          let bookIndex = booksArray.indexOf('${data.id}')
+      booksArray.splice(bookIndex, 1)
+      localStorage.removeItem('id', id)
+      addButton.textContent = "Add to shopping list"; 
+      addedToShoppingBag = false;
       
+      addButton.classList.remove('btn__add');
+      console.log(booksArray);
+      return;
+     
+      }  
+        else  
+        {
+          booksArray.push(id);
+          addButton.textContent = "Remove from the shopping list"
+          localStorage.setItem('id', id);
+          addedToShoppingBag = true;
+         
+        console.log(booksArray);
+        addButton.classList.add('btn__add');}  
+        
+      
+      
+          })
     })
     .catch(error => {
       console.log(error);
     });
 }
 renderBookInformation();
+
+
+

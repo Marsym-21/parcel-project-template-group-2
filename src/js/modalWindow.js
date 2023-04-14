@@ -1,10 +1,10 @@
 import { getBookData } from './getBooksData.js';
+
 const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 function renderBookInformation() {
   const modalContainer = document.querySelector('.modal-container');
 
-  booksInform
-    .getPromId()
+  booksInform.getPromId()
     .then(data => {
       function links(sms) {
         const link = data.buy_links;

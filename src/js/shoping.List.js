@@ -68,7 +68,6 @@ function renderBook() {
       } 
     ); 
   const card = renderCard.then(data => { 
-    console.log(data); 
     shopingListEl.insertAdjacentHTML('beforeend', data); 
   }); 
 } 

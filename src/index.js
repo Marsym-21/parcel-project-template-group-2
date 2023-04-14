@@ -1,3 +1,4 @@
+import './js/support';
 import './js/toggle-theme';
 //Приклад використання промісів з getBooksData.js
 import { getBookData } from './js/getBooksData.js';

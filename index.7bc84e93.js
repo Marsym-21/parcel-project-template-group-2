@@ -1,0 +1,2 @@
+!function(){var e=document.getElementById("theme-checkbox"),t=document.querySelector("body");document.querySelector(".header_btn__home___light");"dark"===localStorage.getItem("theme")&&(e.checked=!0,t.classList.add("dark")),e.addEventListener("change",(function(){e.checked?(t.classList.add("header_btn__home___dark"),localStorage.setItem("theme","header_btn__home___dark")):(t.classList.remove("header_btn__home___dark"),localStorage.setItem("theme","header_btn__home___light"))}))}();
+//# sourceMappingURL=index.7bc84e93.js.map

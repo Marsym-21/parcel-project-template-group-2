@@ -14,6 +14,8 @@
     overflow: auto;
     border: 2px solid #111111;
     background-color: #FFFFFF;
+    border-radius: 18px;
+    border: 2px solid #111111;
 }
 .modal-book {
     display: flex;
@@ -36,11 +38,14 @@
     border: 0;
     opacity: 0.3;
     cursor: pointer;
+    fill: #111111;
+    
     &:hover {
       opacity: 1;
-    }
+      color: #4F2EE8;
+     
   }
-
+  }
   .modal-book__img-container {
     margin-bottom: 30px;
     overflow: hidden;
@@ -63,7 +68,7 @@
   .modal-book__title {
     font-size: 24px;
     line-height: 28px;
-
+    margin: 0;
   }
 
   .modal-book__author {
@@ -86,15 +91,23 @@
     font-size: 18px;
     line-height: 24px;
     color: #111111;
+    border: 2px solid #4F2EE8;
     background-color: #FFFFFF;
+    cursor: pointer;
+     &:hover,
+     &:focus {
+        background-color: #4F2EE8;
+        box-shadow: 0px 4px 18px 0px #00000026;
+        color: #FFFFFF;
+     }
   }
   .modal-book__stores {
     display: flex;
     margin-top: 28px;
-    justify-content: space-between;
+    justify-content:flex-start;
   }
   .modal-book__applebook{
-    margin-left: 40px;
+    margin-left: 10px;
 
   }
   .book {

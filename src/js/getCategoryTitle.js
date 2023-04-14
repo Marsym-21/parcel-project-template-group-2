@@ -1,15 +1,14 @@
-export function getCategoryTitle(category) {
-  const array = category.split('');
-  let newArray = [];
-
-  for (let i = 0; i < array.length; i++) {
-    let letter = array[i];
-    if (letter === ' ') {
-      newArray.push(letter);
-    }
-    console.log(newArray.length);
-  }
-  return newArray.join('');
+function createFirstPartTitle(string) {
+  const array = string.split(' ');
+  const newArray = array.slice(0, array.length - 1);
+  const firstPart = newArray.join(' ');
+  return firstPart;
 }
 
-getCategoryTitle('Combined Print and E-Book Fiction');
+function createLastPartTitle(string) {
+  const array = string.split(' ');
+  const lastPartTitle = array[array.length - 1];
+  return lastPartTitle;
+}
+
+export default { createFirstPartTitle, createLastPartTitle };

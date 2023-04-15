@@ -1,20 +1,47 @@
 import axios from "axios";
 import Notiflix from "notiflix";
 
-const btnMoreElem = document.querySelector('seemore__btn');
+import { getBookData } from './getBooksData.js';
+import { createCategoryString } from './getCategoryString';
 
-btnMoreElem.addEventListener('click', loadMoreElem);
+const btnMoreElem = document.getElementById('seemore__btn');
+console.log(btnMoreElem);
 
-// let currentPage = 1;
-// if the category ids not FileSystemHandle, show the following msg "return Notiflix.Notify.warning(`Sorry, there are no books found in this category. Please try again.`) 
-// searchQuery = event.currentTarget.searchQuery.value.trim();
+const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
-const loadMoreElem = async (e) => {
-    try {
-        const response = await fetch('https://books-backend.p.goit.global/books/category-list');
-        const caegoryList = await response.json();
-        } 
-        catch (error) {
-            console.error('Error', error);
-        }
-};
+let page = 1;
+let limit = 5;
+
+const totalPage = 100 / limit;
+
+// btnMoreElem.addEventListener('click', () => {
+//     if (page > totalPage) {
+//         return toggleAlertPopup();
+//     }
+//     fetchBooks()
+//     .then(())
+// });
+
+// function renderBookList(books) {
+//     const markup = books
+//       .map((book) => {
+//         return `<li class="books-list__item" data-id="${data._id}">
+//         <div class="item-wrap">
+//         <div class = "item-img__wrap">
+//          <img class="item-img"
+//             src="${data.book_image}" 
+//             // alt="${imgAttributeAlt}" 
+//             width ="330px" 
+//             height ="485px" />
+//          </div>
+//             <div class="item-title__wrap">
+//               <h3 class="item__name">${data.title}</h3>
+//               <p class="item__author">${data.author}</p>
+//             </div>
+//         </div>
+//       </li>`;
+//       })
+//       .join("");
+//     blabla.innerHTML = markup;
+//   }
+

@@ -1,7 +1,7 @@
 const checkbox = document.getElementById('theme-checkbox');
 const body = document.querySelector('body');
-const header = document.querySelector('.header_btn__home___light');
 
+const header = document.querySelector('.header_btn__home___light');
 
 // Check local storage for theme preference
 if (localStorage.getItem('theme') === 'dark') {
@@ -9,11 +9,10 @@ if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark');
 }
 checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      body.classList.add('header_btn__home___dark');
-      localStorage.setItem('theme', 'header_btn__home___dark');
-    } else {
-      body.classList.remove('header_btn__home___dark');
-      localStorage.setItem('theme', 'header_btn__home___light');
-    }
-  });
+  if (checkbox.checked) {
+    localStorage.setItem('theme', 'header_btn__home___dark');
+  } else {
+    body.classList.remove('header_btn__home___dark');
+    localStorage.setItem('theme', 'header_btn__home___light');
+  }
+});

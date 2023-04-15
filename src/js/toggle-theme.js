@@ -1,19 +1,30 @@
 const checkbox = document.getElementById('theme-checkbox');
-const body = document.querySelector('body');
 
-// Check local storage for theme preference
+const ref = {
+  body: document.querySelector('body'),
+  header: document.querySelector('.header_btn__shopping__light'),
+};
+
+const object = Object.keys(ref);
+console.log(object);
+
 if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;
-  body.classList.add('dark');
 }
 
-// Toggle theme on checkbox change
 checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
-    body.classList.add('dark');
+    getArray(object);
     localStorage.setItem('theme', 'dark');
   } else {
-    body.classList.remove('dark');
+    getArrayRemoveList(object);
     localStorage.setItem('theme', 'light');
   }
 });
+
+function getArrayAddList(array) {
+  return array.map(data => data.classList.add('dark'));
+}
+function getArrayRemoveList(array) {
+  return array.map(data => data.classList.remove('dark'));
+}

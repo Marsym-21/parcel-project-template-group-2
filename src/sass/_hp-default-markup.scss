@@ -1,16 +1,19 @@
 
 .books-list {
-  width: 1200px;
+  // width: 1200px;
   display: flex;
   gap: 10px;
   justify-content: space-around;
   padding-top: 50px;
 }
 
-// button {
-//   float: right;
-// }
-
+.section__category {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  margin-bottom: 40px;
+}
 
 #seemore__btn {
   display: flex;
@@ -18,11 +21,10 @@
   align-items: flex-start;
   padding: 14px 24px;
   gap: 10px;
-  // position: absolute;
+  position: absolute;
+  right: 0;
   width: 124px;
   height: 46px;
-  // left: 231px;
-  // top: 1421px;
   border: 2px solid #4F2EE8;
   border-radius: 40px;
   background-color: transparent;

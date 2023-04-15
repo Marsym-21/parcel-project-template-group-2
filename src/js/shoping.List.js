@@ -50,14 +50,14 @@ function renderBook() {
 </svg>
                 </a></li>  
               <li>  
-<a href="${links('Apple Books')}" rel="noopener noreferrer" class="amazon">  
+<a href="${links('Apple Books')}" target="_blank" rel="noopener noreferrer" class="amazon">  
   <svg   width="30" height="30" fill="none">
        <use href="${logoPath}#icon-apple-ibooks"></use> 
        </svg>
    </a>  
               </li>  
               <li>  
-<a href="${links('Bookshop')}" rel="noopener noreferrer" class="amazon">  
+<a href="${links('Bookshop')}" target="_blank" rel="noopener noreferrer" class="amazon">  
     <svg   width="40" height="40">
               <use href="${logoPath}#icon-14008711"></use>
        </svg>

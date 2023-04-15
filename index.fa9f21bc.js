@@ -1,2 +1,0 @@
-const e=document.getElementById("theme-checkbox"),t=document.querySelector("body");document.querySelector(".header_btn__home___light");"dark"===localStorage.getItem("theme")&&(e.checked=!0,t.classList.add("dark")),e.addEventListener("change",(()=>{e.checked?(t.classList.add("header_btn__home___dark"),localStorage.setItem("theme","header_btn__home___dark")):(t.classList.remove("header_btn__home___dark"),localStorage.setItem("theme","header_btn__home___light"))}));
-//# sourceMappingURL=index.fa9f21bc.js.map

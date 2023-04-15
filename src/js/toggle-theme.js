@@ -13,23 +13,25 @@ if (localStorage.getItem('theme') === 'dark') {
 
 checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
-    // ref.body.classList.add('dark');
-    // ref.header.classList.add('dark');
+    console.log(getArrayAddList(object));
+    ref.body.classList.add('dark');
+    ref.header.classList.add('dark');
     getArrayAddList(object);
     localStorage.setItem('theme', 'dark');
   } else {
     ref.body.classList.remove('dark');
     ref.header.classList.remove('dark');
-    // getArrayRemoveList(object);
+    getArrayRemoveList(object);
     localStorage.setItem('theme', 'light');
   }
 });
 
 function getArrayAddList(array) {
-  console.log(array);
-  return array.map(data => ref.data.classList.add('dark'));
+  const newArray = array.map(data => `ref.${data}.classList.add('dark');`);
+  return newArray;
 }
 
-// function getArrayRemoveList(array) {
-//   return array.map(data => data.classList.remove('dark'));
-// }
+function getArrayRemoveList(array) {
+  const newArray = array.map(data => `ref.${data}.classList.remove('dark');`);
+  return newArray;
+}

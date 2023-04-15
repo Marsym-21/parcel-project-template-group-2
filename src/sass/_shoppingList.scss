@@ -20,7 +20,7 @@ ul.shoppinglist {
 }
 
 .card-item { 
-    
+    position: relative;
     border: 2px solid rgba(79, 46, 232, 0.4);
     border-radius: 16px;
     display: flex;
@@ -71,14 +71,14 @@ ul.shoppinglist {
         }
 }
 
-.remove {
+.removee {
     position: absolute;
     top: 14;
     right: 14;
     height: 28px;
     width: 28px;
-
-    transform: translate(2px, -3px);
+    z-index: 200;
+    // transform: translate(2px, -3px);
 }
 
 .book-photo {
@@ -142,9 +142,9 @@ ul.shoppinglist {
     color: var(--bookslist-title-color);
 }
 
-.book{
-    width: 30px;
-    height: 30px;
+.dumb {
+        display: flex;
+            z-index: 200;
 }
 
 

@@ -1,8 +1,8 @@
 import { getBookData } from './getBooksData'; 
-// const logoPath = new URL('../images/SVG/PNG/dump.png', import.meta.url); 
+const logoPath = new URL('../images/icons.svg', import.meta.url);
 const shopingListEl = document.querySelector('.shopingList');
 
-const key = ['643282b1e85766588626a080', '643282b1e85766588626a0ba', '643282b1e85766588626a0ba', '643282b1e85766588626a0dc', '643282b2e85766588626a0fc', '643282b2e85766588626a118'];
+const key = ['643282b2e85766588626a144', '643282b2e85766588626a144', '643282b2e85766588626a144', '643282b2e85766588626a144', '643282b2e85766588626a144', '643282b2e85766588626a144'];
  
 stringKey = JSON.stringify(key);
 
@@ -17,7 +17,9 @@ parseLokalstorage = JSON.parse(getLocalstorage)
 parseLokalstorage.map((id) => {
     
 const getBook = new getBookData((id = `${id}`)); 
-
+  console.log(getBook.getPromTopBooks().then(data => {
+  console.log(data)
+}))
 function renderBook() { 
     
   const renderCard = getBook.getPromId() .then( ({ list_name, author, title, book_image, description, buy_links }) => { 
@@ -43,21 +45,29 @@ function renderBook() {
               <li><a href="${links( 
                 'Amazon' 
               )}" target="_blank" rel="noopener noreferrer" class="amazon">  
-                
+                 <svg fill="none" width="60" height="60">
+          <use href="${logoPath}#icon-amazon-ar21"></use>
+</svg>
                 </a></li>  
               <li>  
 <a href="${links('Apple Books')}" rel="noopener noreferrer" class="amazon">  
-  
+  <svg   width="30" height="30" fill="none">
+       <use href="${logoPath}#icon-apple-ibooks"></use> 
+       </svg>
    </a>  
               </li>  
               <li>  
 <a href="${links('Bookshop')}" rel="noopener noreferrer" class="amazon">  
-    
+    <svg   width="40" height="40">
+              <use href="${logoPath}#icon-14008711"></use>
+       </svg>
    </a>  
               </li>  
             </ul>  
-          <div class="remove"> 
-             <img src="./images/dump.svg" alt="">
+          <div class="removee"> 
+           <svg  class="dumb" width="28" height="28">
+              <use href="${logoPath}#icon-dump-1"></use>
+       </svg>
           </div> 
         </div> 
         <div class="description-text" 
@@ -75,7 +85,9 @@ renderBook();
 })
 
 
-
+// getBook.getPromTopBooks().then(data => {
+//   console.log(data)
+// })
 
 
 

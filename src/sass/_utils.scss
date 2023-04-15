@@ -14,7 +14,7 @@ body {
   background-color: var(--body-white-background-color);
 }
 
-.dark {
+body.dark {
   background-color: var(--body-black-background-color);
   color: var(--book-black-description-text-color);
 }

@@ -63,7 +63,6 @@
   display: flex;
   color: var(--body-white-firsttitle-color);
   align-items: center;
-
 }
 .logo.dark {
   fill: var(--header-white-background-color);
@@ -99,7 +98,7 @@
 .header_btn__shopping {
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(18/14);
+  line-height: calc(18 / 14);
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--header-black-background-color);
@@ -117,10 +116,10 @@
   background-color: var(--header-black-background-color);
 }
 
-.header_btn__home{
+.header_btn__home {
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(18/14);
+  line-height: calc(18 / 14);
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--header-black-background-color);
@@ -142,7 +141,7 @@
   background-color: var(--header-left-btn-focus-color);
   font-weight: 700;
   font-size: 14px;
-  line-height: calc(18/14);
+  line-height: calc(18 / 14);
   letter-spacing: -0.04em;
   text-transform: uppercase;
   flex-direction: row;
@@ -226,7 +225,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
-  line-height: calc(29/22);
+  line-height: calc(29 / 22);
   letter-spacing: -0.02em;
 }
 .header_user_name.dark {

@@ -1,6 +1,7 @@
 .shopingList {
     position: relative;
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
         padding: 0;
             width: 335px;
@@ -24,6 +25,7 @@ ul.shoppinglist {
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
+    width: 335px;
     padding: 20px;
     background: var(--body-black-firsttitle-color);
    @media screen and(min-width: 768px) {

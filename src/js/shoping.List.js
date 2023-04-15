@@ -17,9 +17,7 @@ parseLokalstorage = JSON.parse(getLocalstorage)
 parseLokalstorage.map((id) => {
     
 const getBook = new getBookData((id = `${id}`)); 
-  console.log(getBook.getPromTopBooks().then(data => {
-  console.log(data)
-}))
+
 function renderBook() { 
     
   const renderCard = getBook.getPromId() .then( ({ list_name, author, title, book_image, description, buy_links }) => { 
@@ -83,15 +81,6 @@ function renderBook() {
 } 
 renderBook();
 })
-
-
-// getBook.getPromTopBooks().then(data => {
-//   console.log(data)
-// })
-
-
-
-
 
 
     

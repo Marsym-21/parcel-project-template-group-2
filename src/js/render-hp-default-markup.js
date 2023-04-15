@@ -42,7 +42,7 @@
 //        ).join('');
 //        return booksArray
 //       });
-      
+
 //       console.log(books);
 //       // list.insertAdjacentHTML('beforeend', categoryArray);
 //     })
@@ -58,7 +58,7 @@
 import { getBookData } from './getBooksData.js';
 const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 let mainTitle = 'Best Sellers Books';
-const imgAttributeAlt = 'book cover photo'
+const imgAttributeAlt = 'book cover photo';
 
 function renderCategoryList() {
   const sectionCategory = document.querySelector('.categories');
@@ -68,11 +68,13 @@ function renderCategoryList() {
     .getPromTopBooks()
     .then(books => {
       const mainTitleName = document.createElement('h1');
-      sectionCategory.prepend(mainTitleName)
+      sectionCategory.prepend(mainTitleName);
       mainTitleName.textContent = mainTitle;
-     categoryArray = books.slice(0, 4).map(book => {
-       const booksArray = book.books.map(data =>
-         `<li class="books-list__item" data-id="${data._id}">
+      categoryArray = books.slice(0, 4).map(book => {
+        const booksArray = book.books
+          .map(
+            data =>
+              `<li class="books-list__item" data-id="${data._id}">
             <div class="item-wrap">
             <div class = "item-img__wrap">
              <img class="item-img"
@@ -87,8 +89,9 @@ function renderCategoryList() {
                 </div>
             </div>
           </li>`
-       ).join('');
-       return `<div class="section__category">
+          )
+          .join('');
+        return `<div class="section__category">
        <li class="categories-list__item">
            <h2 class="category">${book.list_name}</h2>
            <ul class="books-list">${booksArray}</ul>
@@ -96,13 +99,16 @@ function renderCategoryList() {
           </li>
    </div>`;
       });
-      
+
       const categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
       categoryList.insertAdjacentHTML('beforeend', categoryHtml); // Insert the HTML code into the ul element
     })
     .catch(error => {
       console.log(error);
     });
-};
+}
 
 renderCategoryList();
+
+const button = document.querySelector('.books-list');
+console.log(button);

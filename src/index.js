@@ -81,16 +81,11 @@ export let isAddToShoppingList = true;
 //     });
 // }
 
-const Listen = document.querySelector('.books-list__item');
-console.log(Listen);
+function getClass() {
+  setTimeout(() => {
+    const Listen = document.querySelector('#seemore__btn');
+    console.log(Listen);
+  }, 2000);
+}
 
-// Listen.forEach(element => {
-//   console.log(element);
-// });
-
-// Listen.addEventListener('click', getId);
-
-// function getId(e) {
-//   e.preventDefault();
-//   console.log(e.currentTarget);
-// }
+getClass();

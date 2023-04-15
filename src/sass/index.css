@@ -14,6 +14,12 @@ html {
 
 body {
   font-family: DM Sans;
+  background-color: var(--body-white-background-color);
+}
+
+.dark {
+  background-color: var(--body-black-background-color);
+  color: var(--book-black-description-text-color);
 }
 
 ul,
@@ -119,10 +125,6 @@ img {
 
 .light {
   background-color: var(--body-white-background-color);
-}
-
-.dark {
-  background-color: var(--body-black-background-color);
 }
 
 .checkbox__div {
@@ -302,6 +304,11 @@ img {
   cursor: pointer;
 }
 
+.header_btn__shopping__light.dark {
+  color: #fff;
+  background-color: black;
+}
+
 .header_btn__home___light {
   font-weight: 500;
   font-size: 14px;
@@ -309,6 +316,26 @@ img {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #111111;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  margin-right: 24px;
+}
+
+.header_btn__home___light.dark {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: white;
   text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -381,7 +408,7 @@ img {
     margin-left: 24px;
     width: 184px;
     height: 45px;
-    background: #4F2EE8;
+    background: #4f2ee8;
     border-radius: 45px/36px;
   }
 }
@@ -392,7 +419,7 @@ img {
 }
 
 .header_user__icon {
-  fill: #4F2EE8;
+  fill: #4f2ee8;
   position: absolute;
   margin-left: 12px;
   margin-right: 135px;
@@ -582,14 +609,14 @@ img {
 
 .link--current {
   position: relative;
-  color: #2196F3;
+  color: #2196f3;
 }
 
 .link--current::after {
   content: "";
   position: absolute;
   display: block;
-  background-color: #2196F3;
+  background-color: #2196f3;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
@@ -608,7 +635,7 @@ img {
 
 .header_btn__home___dark {
   color: #fff;
-  background-color: #4F2EE8;
+  background-color: #4f2ee8;
 }
 
 .modal-container {

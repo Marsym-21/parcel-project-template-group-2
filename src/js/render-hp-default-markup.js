@@ -91,7 +91,7 @@ function renderCategoryList() {
        return `<li class="categories-list__item">
                  <h2 class="category">${book.list_name}</h2>
                  <ul class="books-list">${booksArray}</ul>
-                 <button type="button">see more</button>
+                 <button type="button" id="seemore__btn">see more</button>
                 </li>`;
       });
       

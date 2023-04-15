@@ -110,8 +110,8 @@ supportButtonNext.addEventListener('click', () => {
   return;
 });
 
-const supportButtonPrev = document.querySelector('.support-button-prev');
-supportButtonPrev.addEventListener('click', () => {
-  swiper.slidePrev();
-  return;
-});
+// const supportButtonPrev = document.querySelector('.support-button-prev');
+// supportButtonPrev.addEventListener('click', () => {
+//   swiper.slidePrev();
+//   return;
+// });

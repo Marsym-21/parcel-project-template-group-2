@@ -146,8 +146,8 @@ function renderBookInformation() {
 }
 // renderBookInformation()
 
-const ourGallary = document.querySelector('.header-button');
-ourGallary.addEventListener('click', () => {
-  modalContainer.classList.remove('is-hidden');
-  renderBookInformation();
-});
+// const ourGallary = document.querySelector('.header-button');
+// ourGallary.addEventListener('click', () => {
+//   modalContainer.classList.remove('is-hidden');
+//   renderBookInformation();
+// });

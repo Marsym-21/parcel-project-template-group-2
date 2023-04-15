@@ -1,9 +1,11 @@
 .light {
   background-color: var(--body-white-background-color);
+  color: var(--body-black-background-color);
 }
 
 .dark {
   background-color: var(--body-black-background-color);
+  color: var(--body-white-background-color) ;
 }
 
 .checkbox__div {

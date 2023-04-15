@@ -2,7 +2,7 @@
 .header {
     width: 100%;
     height: 72px;
-    border: 1.5px solid #111111;
+    border: 1.5px solid var(--header-black-background-color);
     border-radius: 0px 0px 8px 8px;
     position: sticky;
     top: 0;
@@ -59,7 +59,7 @@
 
 .logo{
     display: flex;
-    color: #111111;
+    color: var(--body-white-firsttitle-color);
     align-items: center;
 
 }
@@ -99,12 +99,12 @@
     line-height: 18px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: #111111;
+    color: var(--body-white-firsttitle-color);
     text-decoration: none;
     justify-content: center;
     align-items: center;
     border-radius: 36px;
-    background-color: #ffff;
+    background-color: var(--header-black-text-svg-color);
     border: none;
     cursor: pointer;
 }
@@ -114,17 +114,17 @@
     line-height: 18px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    color: #111111;
+    color: var(--body-white-firsttitle-color);
     text-decoration: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #ffff;
+    background-color: var(--header-black-text-svg-color);
     border: none;
     margin-right: 24px;
 }
 .current_btn {
-    background-color: #eac645;
+    background-color: var(--header-left-btn-focus-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
@@ -151,7 +151,7 @@
 }
 
 .header_link__lock {
-    color: #111111;
+    color: var(--header-black-background-color);
     width: 14px;
     height: 14px;
 }
@@ -165,7 +165,7 @@
         margin-left: 24px;
         width: 184px;
         height: 45px;
-        background: #4F2EE8;
+        background: var(--header-right-btn-color);
         -moz-border-radius: 45px / 36px;
         -webkit-border-radius: 45px / 36px;
         border-radius: 45px / 36px;
@@ -176,7 +176,7 @@
     }
 }
 .header_user__icon {
-    fill: #4F2EE8;
+    fill: var(--header-right-btn-color);
     position: absolute;
     margin-left:12px;
     margin-right: 135px;
@@ -186,7 +186,7 @@
 .header_link__icon {
     display: wrap;
    stroke: #000000;
-   fill: #ffff;
+   fill: var(--logout-btn-background-color);
    justify-content: center;
    align-items: center;
    text-align: center;
@@ -195,7 +195,7 @@
    transform: translate(0, 20%);
 }
 .header_user_name {
-    color: #fff;
+    color: var(--logout-btn-background-color);
     position: absolute;
     margin-left:12px;
     margin-right:39px;
@@ -290,7 +290,7 @@
     width: 100vw;
     height: 100vh;
     padding: 32px;
-    background-color: #fff;
+    background-color:var(--header-white-background-color);
     z-index: 999;
   
     transform: translateX(100%);
@@ -305,7 +305,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    color: #212121;
+    color: var(--header-black-background-color);
   }
   .mobile-menu {
     padding: 0;
@@ -317,7 +317,7 @@
   .mobile-menu .link {
     display: block;
     padding: 10px;
-    color: #212121;
+    color: var(--header-black-background-color);
     text-decoration: none;
     
     &:hover, 
@@ -344,8 +344,3 @@
 }
 
 //Темна тема
-
-.header_btn__home___dark {
-    color: #fff;
-    background-color: #4F2EE8;
-}

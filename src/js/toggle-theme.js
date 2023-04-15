@@ -2,11 +2,9 @@ const checkbox = document.getElementById('theme-checkbox');
 
 const ref = {
   body: document.querySelector('body'),
-  header: document.querySelector('.header_btn__shopping__light'),
+  header: document.querySelector('.header_btn__shopping'),
 };
-
 const object = Object.keys(ref);
-console.log(object);
 
 if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;
@@ -14,7 +12,7 @@ if (localStorage.getItem('theme') === 'dark') {
 
 checkbox.addEventListener('change', () => {
   if (checkbox.checked) {
-    getArray(object);
+    getArrayAddList(object);
     localStorage.setItem('theme', 'dark');
   } else {
     getArrayRemoveList(object);
@@ -23,8 +21,11 @@ checkbox.addEventListener('change', () => {
 });
 
 function getArrayAddList(array) {
-  return array.map(data => data.classList.add('dark'));
+  array.forEach(data => ref[data].classList.add('dark'));
+  return array;
 }
+
 function getArrayRemoveList(array) {
-  return array.map(data => data.classList.remove('dark'));
+  array.forEach(data => ref[data].classList.remove('dark'));
+  return array;
 }

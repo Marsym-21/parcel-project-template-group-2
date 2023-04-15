@@ -11,4 +11,4 @@ export function createCategoryString(string) {
   return newArray.join('');
 }
 
-createCategoryString('Combined Print and E-Book Fiction');
+// createCategoryString('Combined Print and E-Book Fiction');

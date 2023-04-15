@@ -109,6 +109,3 @@ function renderCategoryList() {
 }
 
 renderCategoryList();
-
-const button = document.querySelector('.books-list');
-console.log(button);

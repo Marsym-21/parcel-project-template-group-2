@@ -1,5 +1,9 @@
 import './js/support';
 import './js/toggle-theme';
+import './js/render-hp-default-markup.js';
+import './js/mobile-menu.js';
+import './js/modalWindow.js';
+import './js/header-theme.js';
 //Приклад використання промісів з getBooksData.js
 import { getBookData } from './js/getBooksData.js';
 import { createCategoryString } from './js/getCategoryString.js';
@@ -74,4 +78,13 @@ function getString(e) {
     .catch(error => {
       console.log(error);
     });
+}
+
+const Listen = document.querySelector('.categories-list');
+console.log(Listen);
+Listen.addEventListener('click', getId);
+
+function getId(e) {
+  e.preventDefault();
+  console.log(e.target);
 }

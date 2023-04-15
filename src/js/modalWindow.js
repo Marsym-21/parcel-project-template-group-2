@@ -1,5 +1,9 @@
 import { getBookData } from './getBooksData.js';
-const booksInform = new getBookData((id = '643282b1e85766588626a085'));
+const booksInform = new getBookData((id = '643282b2e85766588626a112'));
+const logoPath = new URL('../images/icons.svg', import.meta.url);
+let addedToShoppingBag = false;
+let booksArray = [];
+
 function renderBookInformation() {
   const modalContainer = document.querySelector('.modal-container');
 

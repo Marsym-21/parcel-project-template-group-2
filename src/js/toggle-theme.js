@@ -5,7 +5,6 @@ const ref = {
   header: document.querySelector('.header_btn__shopping'),
 };
 const object = Object.keys(ref);
-console.log(object);
 
 if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;

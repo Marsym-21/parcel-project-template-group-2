@@ -88,11 +88,13 @@ function renderCategoryList() {
             </div>
           </li>`
        ).join('');
-       return `<li class="categories-list__item">
-                 <h2 class="category">${book.list_name}</h2>
-                 <ul class="books-list">${booksArray}</ul>
-                 <button type="button" id="seemore__btn">see more</button>
-                </li>`;
+       return `<div class="section__category">
+       <li class="categories-list__item">
+           <h2 class="category">${book.list_name}</h2>
+           <ul class="books-list">${booksArray}</ul>
+           <button type="button" id="seemore__btn">see more</button>
+          </li>
+   </div>`;
       });
       
       const categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string

@@ -1,14 +1,14 @@
 
 .books-list {
-  // width: 1200px;
+  // width: 1440px;
   display: flex;
   gap: 10px;
   justify-content: space-around;
   padding-top: 50px;
 }
-
+// Myra button see-more
 .section__category {
-  width: 1200px;
+  width: 1440px;
   height: 100%;
   display: flex;
   position: relative;
@@ -31,20 +31,20 @@
   font-family: inherit;
   font-weight: 700;
   align-items: center;
-  color: #111111;
+  color: var(--seemore-btn-color-text);
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   text-transform: uppercase;
       
   cursor: pointer;
-      transition: color var(--duration) var(--timing-function),
-      background-color var(--duration) var(--timing-function),
-      box-shadow var(--duration) var(--timing-function);
+      transition: color var(--duration) var(--transition-timing-function),
+      background-color var(--duration) var(--transition-timing-function),
+      box-shadow var(--duration) var(--transition-timing-function);
   &:hover,
   &:focus {
-      color: #FFFFFF;
-      background-color: #4F2EE8;
+      color: var(--seemore-btn-color-focus);
+      background-color: var(--seemore-btn-hover-background-color);
       box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
       }
   }

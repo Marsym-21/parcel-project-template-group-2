@@ -1,5 +1,7 @@
 // import { getBookData } from './getBooksData.js';
 import { getObject } from './toggle-theme.js';
+import { categoryListCheck } from './loadmore-btn.js';
+
 // const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
 // const mainTitle = 'Best Sellers Books';
@@ -106,6 +108,7 @@ function renderCategoryList() {
         newElem: document.querySelector('#seemore__btn'),
       };
       getObject(Object);
+      categoryListCheck(categoryList.innerHTML);
     })
     .catch(error => {
       console.log(error);

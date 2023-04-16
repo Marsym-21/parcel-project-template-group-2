@@ -1,13 +1,10 @@
-import axios from "axios";
-import Notiflix from "notiflix";
+export function categoryListCheck(element) {
+    if (element==!'') {
+        const Listen = document.querySelector('#seemore__btn');
+        console.log(Listen);
+    }
+};
 
-import { getBookData } from './getBooksData.js';
-import { createCategoryString } from './getCategoryString';
-
-const btnMoreElem = document.getElementById('seemore__btn');
-console.log(btnMoreElem);
-
-const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
 let page = 1;
 let limit = 5;

@@ -1,5 +1,6 @@
 import './js/header-theme.js';
 import './js/render-hp-default-markup.js';
+import './js/loadmore-btn';
 import './js/support';
 import './js/toggle-theme';
 import './js/categories';

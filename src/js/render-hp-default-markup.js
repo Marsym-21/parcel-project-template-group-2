@@ -1,5 +1,5 @@
 // import { getBookData } from './getBooksData.js';
-
+import { getObject } from './toggle-theme.js';
 // const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
 // const mainTitle = 'Best Sellers Books';
@@ -42,7 +42,7 @@
 //        ).join('');
 //        return booksArray
 //       });
-      
+
 //       console.log(books);
 //       // list.insertAdjacentHTML('beforeend', categoryArray);
 //     })
@@ -58,7 +58,8 @@
 import { getBookData } from './getBooksData.js';
 const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 let mainTitle = 'Best Sellers Books';
-const imgAttributeAlt = 'book cover photo'
+const imgAttributeAlt = 'book cover photo';
+let Object = {};
 
 function renderCategoryList() {
   const sectionCategory = document.querySelector('.categories');
@@ -68,11 +69,13 @@ function renderCategoryList() {
     .getPromTopBooks()
     .then(books => {
       const mainTitleName = document.createElement('h1');
-      sectionCategory.prepend(mainTitleName)
+      sectionCategory.prepend(mainTitleName);
       mainTitleName.textContent = mainTitle;
-     categoryArray = books.slice(0, 4).map(book => {
-       const booksArray = book.books.map(data =>
-         `<li class="books-list__item" data-id="${data._id}">
+      categoryArray = books.slice(0, 4).map(book => {
+        const booksArray = book.books
+          .map(
+            data =>
+              `<li class="books-list__item" data-id="${data._id}">
             <div class="item-wrap">
             <div class = "item-img__wrap">
              <img class="item-img"
@@ -87,20 +90,29 @@ function renderCategoryList() {
                 </div>
             </div>
           </li>`
-       ).join('');
-       return `<li class="categories-list__item">
-                 <h2 class="category">${book.list_name}</h2>
-                 <ul class="books-list">${booksArray}</ul>
-                 <button type="button">see more</button>
-                </li>`;
+          )
+          .join('');
+        return `<div class="section__category">
+       <li class="categories-list__item">
+           <h2 class="category">${book.list_name}</h2>
+           <ul class="books-list">${booksArray}</ul>
+           <button type="button" id="seemore__btn">see more</button>
+          </li>
+   </div>`;
       });
-      
-      const categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
+
+      categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
       categoryList.insertAdjacentHTML('beforeend', categoryHtml); // Insert the HTML code into the ul element
+
+      Object = {
+        newElem: document.querySelector('#seemore__btn'),
+      };
+      getObject(Object);
     })
     .catch(error => {
       console.log(error);
     });
-};
-
+}
 renderCategoryList();
+
+console.log(Object);

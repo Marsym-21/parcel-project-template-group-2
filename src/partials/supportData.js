@@ -7,8 +7,20 @@ import razom from '../images/support/razom.png';
 import hunger from '../images/support/hunger.png';
 import vision from '../images/support/vision.png';
 import prytula from '../images/support/prytula.png';
+// export {
+//   supportItemsArr,
+//   save,
+//   hope,
+//   united,
+//   medical,
+//   sans,
+//   razom,
+//   hunger,
+//   vision,
+//   prytula,
+// };
 
-export const supportData = [
+const supportItemsArr = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
@@ -55,3 +67,5 @@ export const supportData = [
     img: prytula,
   },
 ];
+
+export default { supportItemsArr };

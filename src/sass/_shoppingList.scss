@@ -1,0 +1,176 @@
+.shopingList {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+        padding: 0;
+            width: 335px;
+            margin-left: auto;
+            margin-right: auto;
+            @media screen and(min-width: 768px) {
+                width: 704px;
+            }
+}
+      
+
+ul.shoppinglist {
+    padding-inline-start: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.card-item { 
+    
+    border: 2px solid rgba(79, 46, 232, 0.4);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 335px;
+    padding: 20px;
+    background: var(--body-black-firsttitle-color);
+   @media screen and(min-width: 768px) {
+            width: 704px;
+        }
+}
+
+.wrapper {
+    position: relative;
+}
+
+.links {
+    display: flex;
+    width: 136px;
+    padding-left: 0;
+    gap: 14px;
+    @media screen and(min-width: 768px) {
+        width: 704px;
+    }
+}
+
+.books-title {
+    max-width: 144px;
+    margin-left: 20px;
+    @media screen and(min-width: 768px) {
+            max-width: 300px;
+            margin-bottom: 0;
+        }
+}
+
+.booktitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.13;
+    margin-top: 0;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+
+    color: var(--body-white-firsttitle-color);
+    @media screen and(min-width: 768px) {
+            margin-bottom: 0;
+            
+        }
+}
+
+.remove {
+    position: absolute;
+    top: 14;
+    right: 14;
+    height: 28px;
+    width: 28px;
+
+    transform: translate(2px, -3px);
+}
+
+.book-photo {
+    min-width: 98px;
+    height: 138px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+
+    // tablet screen 
+    @media screen and (min-width: 768px) {
+        min-width: 116px;
+        height: 165px;
+    }
+}
+
+.img-containerandAuthor {
+
+    // tablet screen 
+    @media screen and (min-width: 768px) {
+        // display: flex; 
+    }
+}
+
+.author {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    max-width: 98px;
+    letter-spacing: -0.04em;
+
+    color: var(--bookslist-title-color);
+}
+
+.description-text {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.description {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.04em;
+
+    color: var(--book-white-description-text-color);
+}
+
+.bookCategory {
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+
+    color: var(--bookslist-title-color);
+}
+
+.book{
+    width: 30px;
+    height: 30px;
+}
+
+
+  .shopingList_title {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+
+
+      letter-spacing: -0.04em;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 20px;
+      color: #111111;
+
+@media screen and (min-width: 768px) {
+     font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    
+  }
+
+  .shopingList_title--color {
+      color: var(--body-white-secondtitle-color);
+  }

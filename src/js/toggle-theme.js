@@ -1,19 +1,37 @@
 const checkbox = document.getElementById('theme-checkbox');
-const body = document.querySelector('body');
 
-// Check local storage for theme preference
+const ref = {
+  body: document.querySelector('body'),
+  header: document.querySelector('.header_btn__shopping'),
+};
+
+let newObject;
+export function getObject(obj) {
+  newObject = { ...ref, ...obj };
+  console.log(newObject);
+}
+console.log(newObject);
+
 if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;
-  body.classList.add('dark');
 }
 
-// Toggle theme on checkbox change
-checkbox.addEventListener('change', () => {
-  if (checkbox.checked) {
-    body.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    body.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }
-});
+// checkbox.addEventListener('change', () => {
+//   if (checkbox.checked) {
+//     getArrayAddList(object);
+//     localStorage.setItem('theme', 'dark');
+//   } else {
+//     getArrayRemoveList(object);
+//     localStorage.setItem('theme', 'light');
+//   }
+// });
+
+// function getArrayAddList(array) {
+//   array.forEach(data => ref[data].classList.add('dark'));
+//   return array;
+// }
+
+// function getArrayRemoveList(array) {
+//   array.forEach(data => ref[data].classList.remove('dark'));
+//   return array;
+// }

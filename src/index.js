@@ -1,9 +1,15 @@
+// import './js/header-theme.js';
+// import './js/render-hp-default-markup.js';
 import './js/support';
 import './js/toggle-theme';
 import './js/categories';
+// import './js/toggle-theme';
+// import './js/mobile-menu.js';
+// import './js/modalWindow.js';
+
 //Приклад використання промісів з getBooksData.js
-import { getBookData } from './js/getBooksData.js';
-import { createCategoryString } from './js/getCategoryString.js';
+// import { getBookData } from './js/getBooksData.js';
+// import { createCategoryString } from './js/getCategoryString.js';
 
 // Змінна яка підтверджує додавання книги до ShoppingList
 export let isAddToShoppingList = true;
@@ -17,8 +23,6 @@ export let isAddToShoppingList = true;
 // const booksInform = new getBookData();
 // const body = document.querySelector('body');
 // const list = document.createElement('ul');
-// list.classList.add("book-categories")
-
 
 // body.append(list);
 // function renderCategoryList() {
@@ -36,10 +40,8 @@ export let isAddToShoppingList = true;
 // }
 // renderCategoryList();
 
-
 // list.addEventListener('click', getString);
 // const box = document.createElement('div');
-// box.classList.add("book-container");
 // list.after(box);
 // function getString(e) {
 //   e.preventDefault();
@@ -76,4 +78,14 @@ export let isAddToShoppingList = true;
 //     .catch(error => {
 //       console.log(error);
 //     });
+// }
+
+// const categoryList = document.querySelector('.categories-list');
+// console.log(categoryList.innerHTML);
+
+// const category = categoryList.innerHTML;
+
+// if (category !== '') {
+//   const Listen = document.querySelector('#seemore__btn');
+//   console.log(Listen);
 // }

@@ -8,8 +8,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 body {
   font-family: DM Sans;
+  background-color: var(--body-white-background-color);
+}
+
+body.dark {
+  background-color: var(--body-black-background-color);
+  color: var(--book-black-description-text-color);
 }
 
 ul,

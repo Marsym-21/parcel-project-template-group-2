@@ -5,6 +5,10 @@ const ref = {
   header: document.querySelector('.header_btn__shopping'),
 };
 
+export class getObject {
+  constructor(object) {}
+}
+
 let newObject;
 export function getObject(obj) {
   newObject = { ...ref, ...obj };

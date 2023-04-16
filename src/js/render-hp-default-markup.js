@@ -103,12 +103,10 @@ function renderCategoryList() {
       categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
       categoryList.insertAdjacentHTML('beforeend', categoryHtml); // Insert the HTML code into the ul element
 
-      Object = {
-        button: document.querySelectorAll('#seemore__btn'),
+      const Object = {
+        newElem: document.querySelector('#seemore__btn'),
       };
-      console.log(Object);
       getObject(Object);
-      console.log(getObject(Object));
     })
     .catch(error => {
       console.log(error);

@@ -81,11 +81,20 @@ export let isAddToShoppingList = true;
 //     });
 // }
 
-function getClass() {
-  setTimeout(() => {
+// const categoryList = document.querySelector('.categories-list');
+// console.log(categoryList.innerHTML);
+
+// const category = categoryList.innerHTML;
+
+// if (category !== '') {
+//   const Listen = document.querySelector('#seemore__btn');
+//   console.log(Listen);
+// }
+
+export function categoryListCheck(element) {
+  if (element !== '') {
     const Listen = document.querySelector('#seemore__btn');
     console.log(Listen);
-  }, 2000);
+    Listen.classList.add('dark');
+  }
 }
-
-getClass();

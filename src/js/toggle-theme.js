@@ -8,6 +8,7 @@ const ref = {
 let newObject;
 export function getObject(obj) {
   newObject = { ...ref, ...obj };
+  console.log(newObject);
   return newObject;
 }
 console.log(newObject);

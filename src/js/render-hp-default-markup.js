@@ -108,6 +108,7 @@ function renderCategoryList() {
       };
       console.log(Object);
       getObject(Object);
+      console.log(getObject(Object));
     })
     .catch(error => {
       console.log(error);

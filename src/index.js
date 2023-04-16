@@ -90,11 +90,3 @@ export let isAddToShoppingList = true;
 //   const Listen = document.querySelector('#seemore__btn');
 //   console.log(Listen);
 // }
-
-export function categoryListCheck(element) {
-  if (element !== '') {
-    const Listen = document.querySelector('#seemore__btn');
-    console.log(Listen);
-    Listen.classList.add('dark');
-  }
-}

@@ -1,5 +1,5 @@
 // import { getBookData } from './getBooksData.js';
-import { categoryListCheck } from '../index.js';
+import { getObject } from './toggle-theme.js';
 // const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 
 // const mainTitle = 'Best Sellers Books';
@@ -103,7 +103,11 @@ function renderCategoryList() {
       categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
       categoryList.insertAdjacentHTML('beforeend', categoryHtml); // Insert the HTML code into the ul element
 
-      categoryListCheck(categoryList.innerHTML);
+      Object = {
+        button: document.querySelectorAll('#seemore__btn'),
+      };
+      console.log(Object);
+      getObject(Object);
     })
     .catch(error => {
       console.log(error);

@@ -82,7 +82,7 @@ function renderSupportList() {
     addSupportItemsToList(supportItemsArr).join(' ')
   );
 }
-// renderSupportList();
+renderSupportList();
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',

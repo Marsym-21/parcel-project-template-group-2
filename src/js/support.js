@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper', {
 const supportButtonNext = document.querySelector('.support-button-next');
 supportButtonNext.addEventListener('click', () => {
   swiper.slideNext();
-  swiper.changeDirection('vertical', true);
+  // swiper.changeDirection('vertical', true);
   return;
 });
 
@@ -61,10 +61,10 @@ swiper.on('reachEnd', () => {
   // supportButtonNext.classList.add('is-hidden');
   // supportButtonPrev.classList.remove('is-hidden');
   supportButtonNext.style.transform = 'rotate(180deg)';
-  console.log('end');
+  // console.log('end');
 });
 swiper.on('reachBeginning', () => {
-  console.log('begin');
+  // console.log('begin');
   // supportButtonNext.classList.remove('is-hidden');
   // supportButtonPrev.classList.add('is-hidden');
   supportButtonNext.style.transform = 'none';

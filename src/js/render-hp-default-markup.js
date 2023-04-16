@@ -59,6 +59,7 @@ import { getBookData } from './getBooksData.js';
 const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 let mainTitle = 'Best Sellers Books';
 const imgAttributeAlt = 'book cover photo';
+let Object = {};
 
 function renderCategoryList() {
   const sectionCategory = document.querySelector('.categories');
@@ -103,7 +104,7 @@ function renderCategoryList() {
       categoryHtml = categoryArray.join(''); // Join the array of HTML strings into a single string
       categoryList.insertAdjacentHTML('beforeend', categoryHtml); // Insert the HTML code into the ul element
 
-      const Object = {
+      Object = {
         newElem: document.querySelector('#seemore__btn'),
       };
       getObject(Object);
@@ -113,3 +114,5 @@ function renderCategoryList() {
     });
 }
 renderCategoryList();
+
+console.log(Object);

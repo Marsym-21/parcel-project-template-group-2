@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper', {
 const supportButtonNext = document.querySelector('.support-button-next');
 supportButtonNext.addEventListener('click', () => {
   swiper.slideNext();
-  swiper.changeDirection('vertical', true);
+  // swiper.changeDirection('vertical', true);
   return;
 });
 

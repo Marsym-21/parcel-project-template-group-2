@@ -1,6 +1,8 @@
 // import './js/header-theme.js';
 // import './js/render-hp-default-markup.js';
 import './js/support';
+import './js/toggle-theme';
+import './js/categories';
 // import './js/toggle-theme';
 // import './js/mobile-menu.js';
 // import './js/modalWindow.js';
@@ -59,22 +61,19 @@ export let isAddToShoppingList = true;
 //         .map(
 //           book => `<div class="book-card">
 //               <img src="${book.book_image}" alt="${book.title}" width="330px" height="485px">
-//               <h2>${book.title}</h2>
+//               <h2>${book.title.slice(0, 20)}${book.title.length > 20 ? '...' : ''}</h2>
 //               <p>${book.author}</p>
 //             </div>`
 //         )
 //         .join('');
 //       box.insertAdjacentHTML('beforeend', categoryArray);
-//       //   console.log(categoryArray);
-//       //   const categoryList = document.querySelector('.book-container');
-//       //   console.log(books);
-//       //   categoryList.innerHTML = `<div class="books_collection">
-//       //       <h1 class="category-title">${e.target.textContent.replace(
-//       //         /(\w+)\s*$/,
-//       //         '<span style="color:#4F2EE8">$1</span>'
-//       //       )}</h1>
-//       //       <ul>${categoryArray}</ul>
-//       //     </div>`;
+//         console.log(categoryArray);
+//         const categoryList = document.querySelector('.book-container');
+//         console.log(books);
+//         categoryList.innerHTML = `<div class="books_collection">
+//             <h1 class="category-title">${books.list_name}</h1>
+//             <ul class="books-list">${categoryArray}</ul>
+//           </div>`;
 //     })
 //     .catch(error => {
 //       console.log(error);

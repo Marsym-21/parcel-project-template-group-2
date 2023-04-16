@@ -1,5 +1,8 @@
+// import supportItemsArr from './supportData';
 import Swiper from 'swiper';
 import '../../node_modules/swiper/swiper.scss';
+
+// console.log(supportItemsArr);
 import save from '../images/support/save.png';
 import hope from '../images/support/hope.png';
 import united from '../images/support/united.png';
@@ -115,3 +118,15 @@ supportButtonNext.addEventListener('click', () => {
 //   swiper.slidePrev();
 //   return;
 // });
+swiper.on('reachEnd', () => {
+  // supportButtonNext.classList.add('is-hidden');
+  // supportButtonPrev.classList.remove('is-hidden');
+  supportButtonNext.style.transform = 'rotate(180deg)';
+  console.log('end');
+});
+swiper.on('reachBeginning', () => {
+  console.log('begin');
+  // supportButtonNext.classList.remove('is-hidden');
+  // supportButtonPrev.classList.add('is-hidden');
+  supportButtonNext.style.transform = 'none';
+});

@@ -59,8 +59,6 @@ import { getBookData } from './getBooksData.js';
 const booksInform = new getBookData((id = '643282b1e85766588626a085'));
 let mainTitle = 'Best Sellers Books';
 const imgAttributeAlt = 'book cover photo';
-let Object = {};
-
 function renderCategoryList() {
   const sectionCategory = document.querySelector('.categories');
   const categoryList = document.querySelector('.categories-list'); // Get reference to the ul element using its id
@@ -114,5 +112,3 @@ function renderCategoryList() {
     });
 }
 renderCategoryList();
-
-console.log(Object);

@@ -3,8 +3,10 @@ if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;
 }
 
+let ref = {};
+
 export function getObject() {
-  const ref = {
+  ref = {
     body: document.querySelector('body'),
     header: document.querySelector('.header_btn__shopping'),
     newElem: document.querySelector('#seemore__btn'),
@@ -22,14 +24,13 @@ export function getObject() {
       localStorage.setItem('theme', 'light');
     }
   });
+}
+function getArrayAddList(array) {
+  array.forEach(data => ref[data].classList.add('dark'));
+  return array;
+}
 
-  function getArrayAddList(array) {
-    array.forEach(data => ref[data].classList.add('dark'));
-    return array;
-  }
-
-  function getArrayRemoveList(array) {
-    array.forEach(data => ref[data].classList.remove('dark'));
-    return array;
-  }
+function getArrayRemoveList(array) {
+  array.forEach(data => ref[data].classList.remove('dark'));
+  return array;
 }

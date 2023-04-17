@@ -1,7 +1,7 @@
 const checkbox = document.getElementById('theme-checkbox');
 
 const ref = {
-  // body: document.querySelector('body'),
+  body: document.querySelector('body'),
   header: document.querySelector('.header_btn__shopping'),
 };
 
@@ -12,9 +12,9 @@ export function getObject(obj) {
 }
 console.log(newObject);
 
-// if (localStorage.getItem('theme') === 'dark') {
-//   checkbox.checked = true;
-// }
+if (localStorage.getItem('theme') === 'dark') {
+  checkbox.checked = true;
+}
 
 // checkbox.addEventListener('change', () => {
 //   if (checkbox.checked) {

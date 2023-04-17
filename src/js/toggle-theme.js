@@ -3,13 +3,20 @@ if (localStorage.getItem('theme') === 'dark') {
   checkbox.checked = true;
 }
 
+ref = {
+  body: document.querySelector('body'),
+  header: document.querySelector('.header_btn__shopping'),
+  // newElem: document.querySelector('#seemore__btn'),
+};
+console.log(ref);
+
 export function getObject() {
   ref = {
     body: document.querySelector('body'),
     header: document.querySelector('.header_btn__shopping'),
     // newElem: document.querySelector('#seemore__btn'),
   };
-  // console.log(ref);
+  console.log(ref);
 
   // const object = Object.keys(ref);
   // console.log(object);

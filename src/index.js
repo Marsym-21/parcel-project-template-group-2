@@ -11,7 +11,7 @@ import './js/modalWindow.js';
 // import { createCategoryString } from './js/getCategoryString.js';
 
 // Змінна яка підтверджує додавання книги до ShoppingList
-export let isAddToShoppingList = true;
+// export let isAddToShoppingList = true;
 // по дефолту повинна бути біла тема.
 // розрахунок адаптивного розміру шрифта = розмір шрифта * 100 / на максимальний розмір вьюпорта vw
 // скрол робити в css, складні скроли можливо в бібліотеці.

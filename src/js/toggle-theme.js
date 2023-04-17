@@ -12,16 +12,18 @@ export function getObject() {
   console.log(ref);
 
   const object = Object.keys(ref);
+  console.log(object);
 
-  checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      getArrayAddList(object);
-      localStorage.setItem('theme', 'dark');
-    } else {
-      getArrayRemoveList(object);
-      localStorage.setItem('theme', 'light');
-    }
-  });
+  // checkbox.addEventListener('change', () => {
+  //   if (checkbox.checked) {
+  //     getArrayAddList(object);
+  //     localStorage.setItem('theme', 'dark');
+  //   } else {
+  //     getArrayRemoveList(object);
+  //     localStorage.setItem('theme', 'light');
+  //   }
+  // });
+
   // function getArrayAddList(array) {
   //   array.forEach(data => ref[data].classList.add('dark'));
   //   return array;

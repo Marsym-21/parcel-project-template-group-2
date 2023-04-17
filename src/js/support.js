@@ -1,7 +1,10 @@
 import { supportData } from './supportData';
-import Swiper from 'swiper';
-import '../../node_modules/swiper/swiper.scss';
+import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
+import '../../node_modules/tiny-slider/src/tiny-slider.scss';
+// import Swiper from 'swiper';
+// import '../../node_modules/swiper/swiper.scss';
 
+console.log(tns);
 function addSupportItemsToList(arr) {
   return arr.map(
     item =>
@@ -23,49 +26,79 @@ function renderSupportList() {
 }
 renderSupportList();
 
-const swiper = new Swiper('.swiper', {
-  direction: 'vertical',
-  slidesPerView: 4,
-  // spaceBetween: 10,
-  // loop: true,
-  // navigation: true,
-  // slidesPerGroup: 4,
-  // oneWayMovement: true,
-  rewind: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 6,
-      slidesPerGroup: 1,
-      // spaceBetween: 20,
-      // loop: true,
-      rewind: true,
-    },
-  },
-});
+// const swiper = new Swiper('.swiper', {
+//   direction: 'vertical',
+//   slidesPerView: 4,
+//   // spaceBetween: 10,
+//   // loop: true,
+//   // navigation: true,
+//   // slidesPerGroup: 4,
+//   // oneWayMovement: true,
+//   rewind: true,
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 6,
+//       slidesPerGroup: 1,
+//       // spaceBetween: 20,
+//       // loop: true,
+//       rewind: true,
+//     },
+//   },
+// });
 
 // console.log(swiper);
 
-const supportButtonNext = document.querySelector('.support-button-next');
-supportButtonNext.addEventListener('click', () => {
-  swiper.slideNext();
-  // swiper.changeDirection('vertical', true);
-  return;
-});
-
-// const supportButtonPrev = document.querySelector('.support-button-prev');
-// supportButtonPrev.addEventListener('click', () => {
-//   swiper.slidePrev();
+// const supportButtonNext = document.querySelector('.support-button-next');
+// supportButtonNext.addEventListener('click', () => {
+//   swiper.slideNext();
+//   // swiper.changeDirection('vertical', true);
 //   return;
 // });
-swiper.on('reachEnd', () => {
-  // supportButtonNext.classList.add('is-hidden');
-  // supportButtonPrev.classList.remove('is-hidden');
-  supportButtonNext.style.transform = 'rotate(180deg)';
-  // console.log('end');
+
+// // const supportButtonPrev = document.querySelector('.support-button-prev');
+// // supportButtonPrev.addEventListener('click', () => {
+// //   swiper.slidePrev();
+// //   return;
+// // });
+// swiper.on('reachEnd', () => {
+//   // supportButtonNext.classList.add('is-hidden');
+//   // supportButtonPrev.classList.remove('is-hidden');
+//   supportButtonNext.style.transform = 'rotate(180deg)';
+//   // console.log('end');
+// });
+// swiper.on('reachBeginning', () => {
+//   // console.log('begin');
+//   // supportButtonNext.classList.remove('is-hidden');
+//   // supportButtonPrev.classList.add('is-hidden');
+//   supportButtonNext.style.transform = 'none';
+// });
+
+const supportButtonNext = document.querySelector('.support-button-next');
+
+const slider = tns({
+  container: '.my-slider',
+  axis: 'vertical',
+  controls: false,
+  nav: false,
+  items: 4,
+  rewind: true,
+  fixedWidthViewportWidth: 292,
+  responsive: {
+    768: {
+      items: 6,
+    },
+  },
+  // autoHeight: true,
+
+  // prevButton: false,
+  // nextButton: '.support-button-next',
+  // controlsContainer: '.controls-container',
 });
-swiper.on('reachBeginning', () => {
-  // console.log('begin');
-  // supportButtonNext.classList.remove('is-hidden');
-  // supportButtonPrev.classList.add('is-hidden');
-  supportButtonNext.style.transform = 'none';
+
+supportButtonNext.addEventListener('click', () => {
+  slider.goTo('next');
+});
+
+slider.events.on('touchEnd', () => {
+  console.log('end');
 });

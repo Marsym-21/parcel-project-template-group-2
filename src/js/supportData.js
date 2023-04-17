@@ -1,12 +1,13 @@
-import save from '../images/support/save.png';
-import hope from '../images/support/hope.png';
-import united from '../images/support/united.png';
-import medical from '../images/support/medical.png';
-import sans from '../images/support/sans.png';
-import razom from '../images/support/razom.png';
-import hunger from '../images/support/hunger.png';
-import vision from '../images/support/vision.png';
-import prytula from '../images/support/prytula.png';
+// import save from '../images/support/save.png';
+const save = new URL('../images/support/save.png', import.meta.url);
+const hope = new URL('../images/support/hope.png', import.meta.url);
+const united = new URL('../images/support/united.png', import.meta.url);
+const medical = new URL('../images/support/medical.png', import.meta.url);
+const sans = new URL('../images/support/sans.png', import.meta.url);
+const razom = new URL('../images/support/razom.png', import.meta.url);
+const hunger = new URL('../images/support/hunger.png', import.meta.url);
+const vision = new URL('../images/support/vision.png', import.meta.url);
+const prytula = new URL('../images/support/prytula.png', import.meta.url);
 
 export const supportData = [
   {

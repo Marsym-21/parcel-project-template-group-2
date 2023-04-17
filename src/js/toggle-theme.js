@@ -5,6 +5,7 @@ if (localStorage.getItem('theme') === 'dark') {
 
 let ref = {};
 
+// sdf\\\?\
 export function getObject() {
   ref = {
     body: document.querySelector('body'),

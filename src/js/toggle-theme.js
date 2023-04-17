@@ -25,12 +25,12 @@ export function getObject() {
     }
   });
 }
-// function getArrayAddList(array) {
-//   array.forEach(data => ref.data.classList.add('dark'));
-//   return array;
-// }
+function getArrayAddList(array) {
+  array.forEach(data => ref[data].classList.add('dark'));
+  return array;
+}
 
-// function getArrayRemoveList(array) {
-//   array.forEach(data => ref.data.classList.remove('dark'));
-//   return array;
-// }
+function getArrayRemoveList(array) {
+  array.forEach(data => ref[data].classList.remove('dark'));
+  return array;
+}

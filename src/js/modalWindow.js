@@ -144,7 +144,7 @@ function renderBookInformation() {
       console.log(error);
     });
 }
-// renderBookInformation()
+renderBookInformation();
 
 // const ourGallary = document.querySelector('.header-button');
 // ourGallary.addEventListener('click', () => {

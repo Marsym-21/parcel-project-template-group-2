@@ -12,9 +12,9 @@ export function getObject(obj) {
 }
 console.log(newObject);
 
-if (localStorage.getItem('theme') === 'dark') {
-  checkbox.checked = true;
-}
+// if (localStorage.getItem('theme') === 'dark') {
+//   checkbox.checked = true;
+// }
 
 // checkbox.addEventListener('change', () => {
 //   if (checkbox.checked) {

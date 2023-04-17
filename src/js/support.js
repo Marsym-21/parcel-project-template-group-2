@@ -1,4 +1,4 @@
-import { supportData } from './supportData';
+// import { supportData } from './supportData';
 import Swiper from 'swiper';
 import '../../node_modules/swiper/swiper.scss';
 

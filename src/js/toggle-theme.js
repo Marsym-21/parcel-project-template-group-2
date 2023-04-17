@@ -1,7 +1,7 @@
 const checkbox = document.getElementById('theme-checkbox');
 
 const ref = {
-  body: document.querySelector('body'),
+  // body: document.querySelector('body'),
   header: document.querySelector('.header_btn__shopping'),
 };
 

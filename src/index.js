@@ -1,4 +1,11 @@
 import './js/toggle-theme';
+import './js/autorisation';
+import './js/refs';
+
+
+
+
+
 //Приклад використання промісів з getBooksData.js
 import { getBookData } from './js/getBooksData.js';
 import { createCategoryString } from './js/getCategoryString.js';

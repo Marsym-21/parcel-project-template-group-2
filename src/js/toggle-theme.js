@@ -1,4 +1,4 @@
-const checkbox = document.getElementById('theme-checkbox');
+export const checkbox = document.getElementById('theme-checkbox');
 const body = document.querySelector('body');
 
 // Check local storage for theme preference
